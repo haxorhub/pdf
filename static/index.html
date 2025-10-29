@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vercel PDF Merge + Index</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#f3f4f6;padding:30px}
+    .card{max-width:700px;margin:0 auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+    input[type=file]{width:100%}
+    button{background:#111827;color:#fff;padding:10px 14px;border:none;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>PDF Merge + Index (Vercel)</h2>
+    <p>Select multiple PDFs and click Merge. The server will return a merged PDF with an index page at the start.</p>
+    <form id="f" enctype="multipart/form-data" method="post" action="/api/index.py">
+      <input type="file" name="pdfs" id="pdfs" accept="application/pdf" multiple required><br><br>
+      <button type="submit">Merge & Create Index</button>
+    </form>
+    <p style="font-size:12px;color:#555">Tip: Upload files in the order you want them merged.</p>
+  </div>
+</body>
+</html>
